@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.AddPartViewController">
+   <children>
+      <Button fx:id="exit" layoutX="531.0" layoutY="561.0" mnemonicParsing="false" text="Cancel" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="save" layoutX="442.0" layoutY="551.0" mnemonicParsing="false" prefWidth="60.0" text="Save" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="103.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="mainTitle" layoutX="33.0" layoutY="34.0" text="Add Part" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="67.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <RadioButton fx:id="inHouseRadio" layoutX="21.0" layoutY="21.0" mnemonicParsing="false" selected="true" text="In-House" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="partType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="outsourcedRadio" layoutX="167.0" layoutY="21.0" mnemonicParsing="false" text="Outsourced" toggleGroup="$partType" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="9.0" layoutY="74.0" text="ID" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="123.0" text="Name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="166.0" text="Inv" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="175.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="217.0" text="Price/Cost" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="225.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="271.0" text="Max" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="275.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="machineIdLabel" layoutX="3.0" layoutY="326.0" text="Machine ID" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="325.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partId" disable="true" layoutX="110.0" layoutY="76.0" prefHeight="25.0" prefWidth="135.0" promptText="Auto Gen- Disabled" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partName" layoutX="96.0" layoutY="121.0" prefWidth="135.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partInv" layoutX="82.0" layoutY="171.0" prefWidth="135.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="170.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partPrice" layoutX="80.0" layoutY="221.0" prefWidth="135.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="220.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partMax" layoutX="110.0" layoutY="271.0" prefWidth="135.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="270.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partMin" layoutX="301.0" layoutY="271.0" prefWidth="135.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="machineId" layoutX="81.0" layoutY="321.0" prefWidth="135.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="236.0" layoutY="275.0" text="Min" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="275.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="companyNameLabel" layoutX="6.0" layoutY="325.0" text="Company Name" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="325.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="companyName" layoutX="101.0" layoutY="320.0" prefWidth="135.0" visible="false" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label fx:id="errorField" alignment="BOTTOM_LEFT" layoutX="75.0" layoutY="443.0" prefHeight="140.0" prefWidth="330.0" textFill="RED" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

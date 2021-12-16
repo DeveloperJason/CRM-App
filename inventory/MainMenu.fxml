@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.MainMenuController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Inventory Management System" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane hgap="25.0" layoutX="25.0" layoutY="100.0" prefHeight="263.0" prefWidth="555.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="100.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 25;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Parts" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="partTableView" layoutX="27.0" layoutY="68.0" prefHeight="200.0" prefWidth="369.0" style="-fx-font-family: arial;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
+                    <columns>
+                      <TableColumn fx:id="partIdCol" editable="false" prefWidth="111.0" style="-fx-font-family: arial;" text="Part ID" />
+                      <TableColumn fx:id="partNameCol" editable="false" prefWidth="147.0" style="-fx-font-family: arial;" text="Part Name" />
+                        <TableColumn fx:id="partInvCol" editable="false" prefWidth="110.0" style="-fx-font-family: arial;" text="Inventory Level" />
+                        <TableColumn fx:id="partCostCol" editable="false" prefWidth="140.0" style="-fx-font-family: arial;" text="Price/Cost per Unit" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="deletePart" layoutX="331.0" layoutY="361.0" mnemonicParsing="false" text="Delete" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modifyPart" layoutX="404.0" layoutY="359.0" mnemonicParsing="false" text="Modify" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="110.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addPart" layoutX="329.0" layoutY="359.0" minWidth="57.0" mnemonicParsing="false" prefWidth="57.0" text="Add" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="180.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="searchParts" layoutX="375.0" layoutY="26.0" promptText="Search by ID or Name" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="partErrorField" layoutX="27.0" layoutY="363.0" prefHeight="17.0" prefWidth="269.0" textFill="RED" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 25;" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="searchProducts" layoutX="374.0" layoutY="26.0" promptText="Search by ID or Name" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="14.0" text="Products" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="productTableView" layoutX="27.0" layoutY="68.0" prefHeight="200.0" prefWidth="369.0" style="-fx-font-family: arial;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
+                     <columns>
+                        <TableColumn fx:id="productIdCol" editable="false" prefWidth="111.0" style="-fx-font-family: arial;" text="Product ID" />
+                        <TableColumn fx:id="productNameCol" editable="false" prefWidth="147.0" style="-fx-font-family: arial;" text="Product Name" />
+                        <TableColumn fx:id="productInvCol" editable="false" prefWidth="110.0" style="-fx-font-family: arial;" text="Inventory Level" />
+                        <TableColumn fx:id="productCostCol" editable="false" prefWidth="140.0" style="-fx-font-family: arial;" text="Price/Cost per Unit" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="deleteProduct" layoutX="331.0" layoutY="361.0" mnemonicParsing="false" text="Delete" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modifyProduct" layoutX="403.0" layoutY="359.0" mnemonicParsing="false" text="Modify" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="110.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addProduct" layoutX="328.0" layoutY="359.0" minWidth="57.0" mnemonicParsing="false" prefWidth="57.0" text="Add" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="180.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="productErrorField" layoutX="27.0" layoutY="363.0" prefHeight="17.0" prefWidth="269.0" textFill="RED" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Button fx:id="exit" layoutX="820.0" layoutY="561.0" mnemonicParsing="false" text="Exit" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
