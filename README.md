@@ -1,2 +1,2 @@
-# WGU-C188
+# Java CRM
 CRM system in Java
